@@ -40,7 +40,7 @@
     </dependencies>
 
     <build>
-        <finalName>cledohicicd</finalName>
+        <finalName>cledoapp</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
