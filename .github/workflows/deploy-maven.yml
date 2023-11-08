@@ -29,3 +29,16 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn clean install
+    - name: Build & push Docker image
+      uses: mr-smithers-excellent/docker-build-push@v6
+      with:
+        image: cledohi/cledoapp
+        tags: latest
+        registry: registry-url.io
+        dockerfile: Dockerfile
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+# login to dockerhub
+# build a docker image
+#pushe image to docker hub
+#
